@@ -29,10 +29,6 @@ const Quiz = () => {
     setShowResults(true);
   };
 
-  const isAnswerCorrect = (question, answer) => {
-    return answers[question] === answer;
-  };
-
   return (
     <Container>
       <Box mt={3} textAlign="center">
@@ -52,45 +48,9 @@ const Quiz = () => {
                   value={answers.q1}
                   onChange={(e) => handleAnswerChange('q1', e.target.value)}
                 >
-                  <FormControlLabel
-                    value="a"
-                    control={<Radio />}
-                    label={
-                      <span
-                        style={{
-                          color: isAnswerCorrect('q1', 'a') ? 'green' : 'red',
-                        }}
-                      >
-                        Biblioteca JavaScript
-                      </span>
-                    }
-                  />
-                  <FormControlLabel
-                    value="b"
-                    control={<Radio />}
-                    label={
-                      <span
-                        style={{
-                          color: isAnswerCorrect('q1', 'b') ? 'green' : 'red',
-                        }}
-                      >
-                        Framework JavaScript
-                      </span>
-                    }
-                  />
-                  <FormControlLabel
-                    value="c"
-                    control={<Radio />}
-                    label={
-                      <span
-                        style={{
-                          color: isAnswerCorrect('q1', 'c') ? 'green' : 'red',
-                        }}
-                      >
-                        Linguagem de programação
-                      </span>
-                    }
-                  />
+                  <FormControlLabel value="a" control={<Radio />} label="Biblioteca JavaScript" />
+                  <FormControlLabel value="b" control={<Radio />} label="Framework JavaScript" />
+                  <FormControlLabel value="c" control={<Radio />} label="Linguagem de programação" />
                 </RadioGroup>
               </FormControl>
 
@@ -102,45 +62,9 @@ const Quiz = () => {
                   value={answers.q2}
                   onChange={(e) => handleAnswerChange('q2', e.target.value)}
                 >
-                  <FormControlLabel
-                    value="a"
-                    control={<Radio />}
-                    label={
-                      <span
-                        style={{
-                          color: isAnswerCorrect('q2', 'a') ? 'green' : 'red',
-                        }}
-                      >
-                        JavaScript puro
-                      </span>
-                    }
-                  />
-                  <FormControlLabel
-                    value="b"
-                    control={<Radio />}
-                    label={
-                      <span
-                        style={{
-                          color: isAnswerCorrect('q2', 'b') ? 'green' : 'red',
-                        }}
-                      >
-                        Extensão de JavaScript
-                      </span>
-                    }
-                  />
-                  <FormControlLabel
-                    value="c"
-                    control={<Radio />}
-                    label={
-                      <span
-                        style={{
-                          color: isAnswerCorrect('q2', 'c') ? 'green' : 'red',
-                        }}
-                      >
-                        Framework JavaScript
-                      </span>
-                    }
-                  />
+                  <FormControlLabel value="a" control={<Radio />} label="JavaScript puro" />
+                  <FormControlLabel value="b" control={<Radio />} label="Extensão de JavaScript" />
+                  <FormControlLabel value="c" control={<Radio />} label="Framework JavaScript" />
                 </RadioGroup>
               </FormControl>
 
@@ -152,45 +76,9 @@ const Quiz = () => {
                   value={answers.q3}
                   onChange={(e) => handleAnswerChange('q3', e.target.value)}
                 >
-                  <FormControlLabel
-                    value="a"
-                    control={<Radio />}
-                    label={
-                      <span
-                        style={{
-                          color: isAnswerCorrect('q3', 'a') ? 'green' : 'red',
-                        }}
-                      >
-                        Google
-                      </span>
-                    }
-                  />
-                  <FormControlLabel
-                    value="b"
-                    control={<Radio />}
-                    label={
-                      <span
-                        style={{
-                          color: isAnswerCorrect('q3', 'b') ? 'green' : 'red',
-                        }}
-                      >
-                        Facebook
-                      </span>
-                    }
-                  />
-                  <FormControlLabel
-                    value="c"
-                    control={<Radio />}
-                    label={
-                      <span
-                        style={{
-                          color: isAnswerCorrect('q3', 'c') ? 'green' : 'red',
-                        }}
-                      >
-                        Microsoft
-                      </span>
-                    }
-                  />
+                  <FormControlLabel value="a" control={<Radio />} label="Google" />
+                  <FormControlLabel value="b" control={<Radio />} label="Facebook" />
+                  <FormControlLabel value="c" control={<Radio />} label="Microsoft" />
                 </RadioGroup>
               </FormControl>
             </form>
@@ -204,11 +92,11 @@ const Quiz = () => {
                 Enviar Respostas
               </Button>
             </Box>
-
+            
             {showResults && (
               <Box mt={3} textAlign="center">
                 <Typography variant="h6" gutterBottom>
-                  Pontuação: {score} de 3
+                  Você acertou {score} de 3 perguntas.
                 </Typography>
               </Box>
             )}
