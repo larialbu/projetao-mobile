@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Home from './pages/Home'; 
 import Course from './pages/Course.js';
 import Quiz from './pages/Quiz.js'
+import List from './pages/List.js';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -21,6 +22,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/course" element={<Course />} />
               <Route path="/quiz" element={<Quiz />} />
+              <Route path="/list" element={<List />} />
             </>
           )}
         </Routes>
