@@ -87,6 +87,15 @@ const Course = () => {
         >
           Ir para o Quiz
         </Button>
+        <Button
+                component={Link}
+                to="/list"
+                variant="contained"
+                color="primary"
+                style={{ marginLeft: '10px' }} 
+              >
+                Listas
+              </Button>
       </Box>
     </Container>
   );
